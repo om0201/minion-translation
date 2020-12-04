@@ -4,6 +4,11 @@ const output = document.querySelector("#op")
 
 const url = 'https://api.funtranslations.com/translate/minion.json'
 
+function errorHandler(error) {
+  console.log("The following error occured: ", error)
+  alert('It seems there is an error, please try again after some time.')
+}
+
 function translate() {
 
   var textInput = input.value
@@ -17,7 +22,7 @@ function translate() {
   .then(json => {
     output.innerText = json.contents.translated
   })
-
+  .catch(errorHandler)
 }
 
 buttonTranslate.addEventListener('click', translate)
