@@ -1,7 +1,9 @@
 const buttonTranslate = document.querySelector("#btn-translate");
+const input = document.querySelector("#ip")
+const output = document.querySelector("#op")
 
 function translate() {
-  console.log('Clicked');
+  output.innerText = input.value;
 }
 
 buttonTranslate.addEventListener('click', translate)
