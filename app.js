@@ -6,7 +6,7 @@ const url = 'https://api.funtranslations.com/translate/minion.json'
 
 function errorHandler(error) {
   console.log("The following error occured: ", error)
-  alert('It seems there is an error, please try again after some time.')
+  alert('It seems an error occured, please try again after some time.')
 }
 
 function translate() {
